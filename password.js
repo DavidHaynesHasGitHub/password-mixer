@@ -1,11 +1,10 @@
-function scrambled(){
-  var argument = process.argv.slice(2);
-  var scramble = argument[0];
-
-scramble = scramble.replace(/a/gi, '4');
-scramble = scramble.replace(/e/gi, '3');
-scramble = scramble.replace(/o/gi, '0');
-scramble = scramble.replace(/l/gi, 'l');
-return scramble;
+function scrambled(scramble){
+  return scramble
+    .replace(/a/gi, '4')
+    .replace(/e/gi, '3')
+    .replace(/o/gi, '0')
+    .replace(/l/gi, 'l');
 }
-console.log(scrambled());
+
+var argument = process.argv.slice(2);
+console.log(scrambled(argument[0]));
